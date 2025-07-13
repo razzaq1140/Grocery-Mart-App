@@ -20,10 +20,10 @@ class _SignupScreenState extends State<SignupScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: AppColors.white,
       appBar: AppBar(
-        backgroundColor: Colors.white,
-        surfaceTintColor: Colors.white,
+        backgroundColor: AppColors.white,
+        surfaceTintColor: AppColors.white,
         elevation: 0,
         automaticallyImplyLeading: false,
       ),
@@ -37,7 +37,7 @@ class _SignupScreenState extends State<SignupScreen> {
                 child: Image.asset(
                   AppImages.carrotImages,
                   height: 60,
-                  color: Colors.red,
+                  color: AppColors.errorRed,
                 ),
               ),
               const SizedBox(height: 24),
@@ -48,19 +48,19 @@ class _SignupScreenState extends State<SignupScreen> {
               const SizedBox(height: 10),
               const Text(
                 'Enter your credentials to continue',
-                style: TextStyle(fontSize: 16, color: Colors.grey),
+                style: TextStyle(fontSize: 16, color: AppColors.grey),
               ),
               const SizedBox(height: 20),
               TextFormField(
                 controller: _nameController,
                 decoration: InputDecoration(
                   labelText: 'Username',
-                  labelStyle: const TextStyle(color: Colors.grey),
+                  labelStyle: const TextStyle(color: AppColors.grey),
                   enabledBorder: const UnderlineInputBorder(
-                    borderSide: BorderSide(color: Colors.grey),
+                    borderSide: BorderSide(color: AppColors.grey),
                   ),
                   focusedBorder: const UnderlineInputBorder(
-                    borderSide: BorderSide(color: Colors.grey),
+                    borderSide: BorderSide(color: AppColors.grey),
                   ),
                   border: const UnderlineInputBorder(),
                 ),
@@ -70,12 +70,12 @@ class _SignupScreenState extends State<SignupScreen> {
                 controller: _emailController,
                 decoration: InputDecoration(
                   labelText: 'Email',
-                  labelStyle: const TextStyle(color: Colors.grey),
+                  labelStyle: const TextStyle(color: AppColors.grey),
                   enabledBorder: const UnderlineInputBorder(
-                    borderSide: BorderSide(color: Colors.grey),
+                    borderSide: BorderSide(color: AppColors.grey),
                   ),
                   focusedBorder: const UnderlineInputBorder(
-                    borderSide: BorderSide(color: Colors.grey),
+                    borderSide: BorderSide(color: AppColors.grey),
                   ),
                   border: const UnderlineInputBorder(),
                 ),
@@ -86,18 +86,18 @@ class _SignupScreenState extends State<SignupScreen> {
                 obscureText: _obscurePassword,
                 decoration: InputDecoration(
                   labelText: 'Password',
-                  labelStyle: const TextStyle(color: Colors.grey),
+                  labelStyle: const TextStyle(color: AppColors.grey),
                   enabledBorder: const UnderlineInputBorder(
-                    borderSide: BorderSide(color: Colors.grey),
+                    borderSide: BorderSide(color: AppColors.grey),
                   ),
                   focusedBorder: const UnderlineInputBorder(
-                    borderSide: BorderSide(color: Colors.grey),
+                    borderSide: BorderSide(color: AppColors.grey),
                   ),
                   border: const UnderlineInputBorder(),
                   suffixIcon: IconButton(
                     icon: Icon(
                       _obscurePassword ? Icons.visibility_off : Icons.visibility,
-                      color: Colors.grey,
+                      color: AppColors.grey,
                     ),
                     onPressed: () {
                       setState(() {
@@ -110,13 +110,13 @@ class _SignupScreenState extends State<SignupScreen> {
               const SizedBox(height: 10),
               RichText(
                 text: TextSpan(
-                  style: const TextStyle(fontSize: 12, color: Colors.grey),
+                  style: const TextStyle(fontSize: 12, color: AppColors.grey),
                   children: [
                     const TextSpan(text: 'By continuing you agree to our '),
                     TextSpan(
                       text: 'Terms of Service',
                       style: const TextStyle(
-                        color: Color(0xFF4CAF50),
+                        color: AppColors.primary,
                         fontWeight: FontWeight.w500,
                       ),
                       recognizer: TapGestureRecognizer()
@@ -128,7 +128,7 @@ class _SignupScreenState extends State<SignupScreen> {
                     TextSpan(
                       text: 'Privacy Policy',
                       style: const TextStyle(
-                        color: Color(0xFF4CAF50),
+                        color: AppColors.primary,
                         fontWeight: FontWeight.w500,
                       ),
                       recognizer: TapGestureRecognizer()
@@ -148,7 +148,7 @@ class _SignupScreenState extends State<SignupScreen> {
               Center(
                 child: RichText(
                   text: TextSpan(
-                    style: const TextStyle(color: Colors.black),
+                    style: const TextStyle(color: AppColors.black),
                     children: [
                       const TextSpan(text: 'Already have an account? '),
                       WidgetSpan(
@@ -159,7 +159,7 @@ class _SignupScreenState extends State<SignupScreen> {
                           child: Text(
                             'Singup',
                             style: TextStyle(
-                              color: Color(0xFF4CAF50),
+                              color: AppColors.primary,
                               fontWeight: FontWeight.bold,
                             ),
                           ),

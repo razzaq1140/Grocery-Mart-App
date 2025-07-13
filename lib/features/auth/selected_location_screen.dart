@@ -19,13 +19,13 @@ class _SelectLocationScreenState extends State<SelectLocationScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: AppColors.white,
       appBar: AppBar(
-        backgroundColor: Colors.white,
-        surfaceTintColor: Colors.white,
+        backgroundColor: AppColors.white,
+        surfaceTintColor: AppColors.white,
         elevation: 0,
         leading: IconButton(
-          icon: const Icon(Icons.arrow_back, color: Colors.black),
+          icon: const Icon(Icons.arrow_back, color: AppColors.black),
           onPressed: () => Navigator.pop(context),
         ),
       ),
@@ -40,14 +40,14 @@ class _SelectLocationScreenState extends State<SelectLocationScreen> {
               fit: BoxFit.contain,
             ),
             const SizedBox(height: 24),
-            const Center(
+             Center(
               child: Text(
                 'Select Your Location',
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontSize: 24,
                   fontWeight: FontWeight.bold,
-                  color: Colors.black87,
+                  color: AppColors.black,
                 ),
               ),
             ),
@@ -56,7 +56,7 @@ class _SelectLocationScreenState extends State<SelectLocationScreen> {
               child: Text(
                 'Switch on your location to stay in tune\nwith what\'s happening in your area',
                 textAlign: TextAlign.center,
-                style: TextStyle(fontSize: 16, color: Colors.grey),
+                style: TextStyle(fontSize: 16, color: AppColors.grey),
               ),
             ),
             const SizedBox(height: 70),
@@ -68,7 +68,7 @@ class _SelectLocationScreenState extends State<SelectLocationScreen> {
                 'Your Zone',
                 style: TextStyle(
                   fontSize: 16,
-                  color: Colors.grey.shade600,
+                  color: AppColors.grey,
                 ),
               ),
             ),
@@ -77,11 +77,11 @@ class _SelectLocationScreenState extends State<SelectLocationScreen> {
               icon: const Icon(Icons.arrow_drop_down),
               decoration: InputDecoration(
                 enabledBorder: const UnderlineInputBorder(
-                  borderSide: BorderSide(color: Colors.grey),
+                  borderSide: BorderSide(color: AppColors.grey),
                   borderRadius: BorderRadius.zero,
                 ),
                 focusedBorder: const UnderlineInputBorder(
-                  borderSide: BorderSide(color: Colors.grey),
+                  borderSide: BorderSide(color: AppColors.grey),
                   borderRadius: BorderRadius.zero,
                 ),
                 contentPadding: const EdgeInsets.symmetric(vertical: 10),
@@ -107,7 +107,7 @@ class _SelectLocationScreenState extends State<SelectLocationScreen> {
                 'Your Area',
                 style: TextStyle(
                   fontSize: 16,
-                  color: Colors.grey.shade600,
+                  color: AppColors.grey,
                 ),
               ),
             ),
@@ -116,11 +116,11 @@ class _SelectLocationScreenState extends State<SelectLocationScreen> {
               icon: const Icon(Icons.arrow_drop_down),
               decoration: InputDecoration(
                 enabledBorder: const UnderlineInputBorder(
-                  borderSide: BorderSide(color: Colors.grey),
+                  borderSide: BorderSide(color: AppColors.grey),
                   borderRadius: BorderRadius.zero,
                 ),
                 focusedBorder: const UnderlineInputBorder(
-                  borderSide: BorderSide(color: Colors.grey),
+                  borderSide: BorderSide(color: AppColors.grey),
                   borderRadius: BorderRadius.zero,
                 ),
                 contentPadding: const EdgeInsets.symmetric(vertical: 10),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:grocery_mart_app/core/utils/constants/app_colors.dart';
 import 'package:grocery_mart_app/core/utils/constants/app_images.dart';
 import 'package:grocery_mart_app/widgets/custom_button.dart';
 import 'package:intl_phone_field/intl_phone_field.dart';
@@ -11,17 +12,16 @@ class SignScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: AppColors.white,
       body: SafeArea(
         child:SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              // 🟢 Image full-width, top of SafeArea
               Image.asset(
                 AppImages.nectarLogoImage,
                 fit: BoxFit.contain,
-                height: MediaQuery.of(context).size.height * 0.4, // ~40% of screen
+                height: MediaQuery.of(context).size.height * 0.4,
                 width: double.infinity,
               ),
 
@@ -39,7 +39,7 @@ class SignScreen extends StatelessWidget {
                         style: TextStyle(
                           fontSize: 26,
                           fontWeight: FontWeight.bold,
-                          color: Colors.black87,
+                          color: AppColors.black,
                           height: 1.3,
                         ),
                       ),
@@ -49,13 +49,13 @@ class SignScreen extends StatelessWidget {
                     IntlPhoneField(
                       decoration: InputDecoration(
                         hintText: 'Phone Number',
-                        labelStyle: const TextStyle(color: Colors.grey),
+                        labelStyle: const TextStyle(color: AppColors.grey),
                         enabledBorder: UnderlineInputBorder(
-                          borderSide: BorderSide(color: Colors.grey.shade400, width: 1),
+                          borderSide: BorderSide(color: AppColors.grey, width: 1),
                           borderRadius: BorderRadius.zero,
                         ),
                         focusedBorder: UnderlineInputBorder(
-                          borderSide: BorderSide(color: Colors.grey.shade600, width: 1.2),
+                          borderSide: BorderSide(color: AppColors.grey, width: 1.2),
                           borderRadius: BorderRadius.zero,
                         ),
                         contentPadding: const EdgeInsets.symmetric(
@@ -71,7 +71,7 @@ class SignScreen extends StatelessWidget {
                       style: const TextStyle(fontSize: 16),
                       dropdownTextStyle: const TextStyle(
                         fontSize: 16,
-                        color: Colors.black,
+                        color: AppColors.black,
                       ),
                     ),
 
@@ -81,7 +81,7 @@ class SignScreen extends StatelessWidget {
                       children: [
                         Expanded(
                           child: Divider(
-                            color: Colors.grey.shade300,
+                            color: AppColors.grey,
                             thickness: 1,
                           ),
                         ),
@@ -90,14 +90,14 @@ class SignScreen extends StatelessWidget {
                           child: Text(
                             'Or connect with social media',
                             style: TextStyle(
-                              color: Colors.grey.shade600,
+                              color: AppColors.grey,
                               fontSize: 14,
                             ),
                           ),
                         ),
                         Expanded(
                           child: Divider(
-                            color: Colors.grey.shade300,
+                            color: AppColors.grey,
                             thickness: 1,
                           ),
                         ),
@@ -109,7 +109,7 @@ class SignScreen extends StatelessWidget {
                       text: 'Continue with Google',
                       iconPath: AppImages.googleImage,
                       color: const Color(0XFF5383EC),
-                      textColor: Colors.white,
+                      textColor: AppColors.white,
                       onPressed: () {
                         debugPrint('Google sign-in');
                         Navigator.pushNamed(context, '/mobile_number_screen');
@@ -121,7 +121,7 @@ class SignScreen extends StatelessWidget {
                       text: 'Continue with Facebook',
                       iconPath: AppImages.facebookImage,
                       color: const Color(0xFF4A66AC),
-                      textColor: Colors.white,
+                      textColor: AppColors.white,
                       onPressed: () {
                         debugPrint('Facebook sign-in');
                       },

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:grocery_mart_app/core/utils/constants/app_colors.dart';
 
 class BeveragesScreen extends StatelessWidget {
   const BeveragesScreen({super.key});
@@ -46,20 +47,20 @@ class BeveragesScreen extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.white,
+        backgroundColor: AppColors.white,
         elevation: 0,
         title: const Text(
           'Beverages',
-          style: TextStyle(color: Colors.black),
+          style: TextStyle(color: AppColors.black),
         ),
         centerTitle: true,
         leading: IconButton(
-          icon: const Icon(Icons.arrow_back, color: Colors.black),
+          icon: const Icon(Icons.arrow_back, color: AppColors.black),
           onPressed: () => Navigator.pop(context),
         ),
         actions: [
           IconButton(
-            icon: const Icon(Icons.settings, color: Colors.black),
+            icon: const Icon(Icons.settings, color: AppColors.black),
             onPressed: () {},
           ),
         ],
@@ -107,7 +108,7 @@ class ProductCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        border: Border.all(color: Colors.grey.shade200),
+        border: Border.all(color: AppColors.grey),
         borderRadius: BorderRadius.circular(12),
       ),
       padding: const EdgeInsets.all(8),
@@ -133,7 +134,7 @@ class ProductCard extends StatelessWidget {
           Text(
             subtitle,
             style: const TextStyle(
-              color: Colors.grey,
+              color: AppColors.grey,
               fontSize: 12,
             ),
           ),
@@ -150,12 +151,12 @@ class ProductCard extends StatelessWidget {
               ),
               Container(
                 decoration: const BoxDecoration(
-                  color: Colors.green,
+                  color: AppColors.primary,
                   shape: BoxShape.circle,
                 ),
                 child: IconButton(
                   onPressed: () {},
-                  icon: const Icon(Icons.add, color: Colors.white),
+                  icon: const Icon(Icons.add, color: AppColors.white),
                   iconSize: 20,
                   padding: EdgeInsets.zero,
                   constraints: const BoxConstraints(),

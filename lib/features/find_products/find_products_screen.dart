@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:grocery_mart_app/core/utils/constants/app_colors.dart';
 import 'package:grocery_mart_app/core/utils/constants/app_images.dart';
 
 class FindProductsScreen extends StatefulWidget {
@@ -16,7 +17,7 @@ class _FindProductsScreenState extends State<FindProductsScreen> {
     {
       'title': 'Frash Fruits & Vegetable',
       'image': AppImages.image_1,
-      'color': Colors.green.shade50,
+      'color': AppColors.primary,
     },
     {
       'title': 'Cooking Oil & Ghee',
@@ -26,7 +27,7 @@ class _FindProductsScreenState extends State<FindProductsScreen> {
     {
       'title': 'Meat & Fish',
       'image': AppImages.image_3,
-      'color': Colors.red.shade50,
+      'color': AppColors.errorRed,
     },
     {
       'title': 'Bakery & Snacks',
@@ -73,15 +74,15 @@ class _FindProductsScreenState extends State<FindProductsScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: AppColors.white,
       appBar: AppBar(
-        surfaceTintColor: Colors.white,
+        surfaceTintColor: AppColors.white,
         centerTitle: true,
         title: const Text(
           'Find Products',
-          style: TextStyle(color: Colors.black),
+          style: TextStyle(color: AppColors.black),
         ),
-        backgroundColor: Colors.white,
+        backgroundColor: AppColors.white,
         elevation: 0,
         automaticallyImplyLeading: false,
       ),
@@ -94,7 +95,7 @@ class _FindProductsScreenState extends State<FindProductsScreen> {
               Container(
                 padding: const EdgeInsets.symmetric(horizontal: 12),
                 decoration: BoxDecoration(
-                  color: Colors.grey.shade100,
+                  color: AppColors.grey,
                   borderRadius: BorderRadius.circular(12),
                 ),
                 child: TextField(
@@ -114,7 +115,7 @@ class _FindProductsScreenState extends State<FindProductsScreen> {
                     ? const Center(
                   child: Text(
                     'No products found',
-                    style: TextStyle(color: Colors.grey),
+                    style: TextStyle(color: AppColors.grey),
                   ),
                 )
                     : GridView.builder(

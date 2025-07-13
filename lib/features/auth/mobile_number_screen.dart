@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:grocery_mart_app/core/utils/constants/app_colors.dart';
 import 'package:intl_phone_field/intl_phone_field.dart';
 
 class MobileNumberScreen extends StatelessWidget {
@@ -9,12 +10,12 @@ class MobileNumberScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: AppColors.white,
       appBar: AppBar(
-        surfaceTintColor: Colors.white,
-        backgroundColor: Colors.white,
+        surfaceTintColor: AppColors.white,
+        backgroundColor: AppColors.white,
         leading: IconButton(
-          icon: const Icon(Icons.arrow_back_ios, color: Colors.black),
+          icon: const Icon(Icons.arrow_back_ios, color: AppColors.black),
           onPressed: () => Navigator.pop(context),
         ),
       ),
@@ -28,7 +29,7 @@ class MobileNumberScreen extends StatelessWidget {
               style: TextStyle(
                 fontSize: 22,
                 fontWeight: FontWeight.bold,
-                color: Colors.black87,
+                color: AppColors.black,
               ),
             ),
             const SizedBox(height: 30),
@@ -36,7 +37,7 @@ class MobileNumberScreen extends StatelessWidget {
               'Mobile Number',
               style: TextStyle(
                 fontSize: 14,
-                color: Colors.grey,
+                color: AppColors.grey,
               ),
             ),
             const SizedBox(height: 8),
@@ -45,10 +46,10 @@ class MobileNumberScreen extends StatelessWidget {
                 hintText: '1XXXXXXXXX',
                 hintStyle: const TextStyle(fontSize: 16),
                 enabledBorder: UnderlineInputBorder(
-                  borderSide: BorderSide(color: Colors.grey.shade400, width: 1),
+                  borderSide: BorderSide(color: AppColors.grey, width: 1),
                 ),
                 focusedBorder: UnderlineInputBorder(
-                  borderSide: BorderSide(color: Colors.grey.shade600, width: 1.2),
+                  borderSide: BorderSide(color: AppColors.grey, width: 1.2),
                 ),
                 contentPadding: const EdgeInsets.symmetric(
                   vertical: 12,
@@ -60,7 +61,7 @@ class MobileNumberScreen extends StatelessWidget {
               },
               disableLengthCheck: true,
               style: const TextStyle(fontSize: 16),
-              dropdownTextStyle: const TextStyle(fontSize: 16, color: Colors.black),
+              dropdownTextStyle: const TextStyle(fontSize: 16, color: AppColors.black),
             ),
             const Spacer(),
             Align(
@@ -73,10 +74,10 @@ class MobileNumberScreen extends StatelessWidget {
                   },
                   style: ElevatedButton.styleFrom(
                     shape: const CircleBorder(),
-                    backgroundColor: Colors.green,
+                    backgroundColor: AppColors.primary,
                     padding: const EdgeInsets.all(18),
                   ),
-                  child: const Icon(Icons.arrow_forward_ios_rounded, color: Colors.white),
+                  child: const Icon(Icons.arrow_forward_ios_rounded, color: AppColors.white),
                 ),
               ),
             ),

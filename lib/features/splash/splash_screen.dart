@@ -46,14 +46,14 @@ class _SplashScreenState extends State<SplashScreen> {
                       style: TextStyle(
                         fontSize: 40,
                         fontWeight: FontWeight.w600,
-                        color: Colors.white,
+                        color: AppColors.white,
                       ),
                     ),
                     const Text(
                       'online groceries',
                       style: TextStyle(
                         fontSize: 16,
-                        color: Colors.white70,
+                        color: AppColors.white,
                         letterSpacing: 1.2,
                       ),
                     ),

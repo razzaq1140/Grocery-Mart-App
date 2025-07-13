@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:grocery_mart_app/core/utils/constants/app_colors.dart';
 
 class VerificationScreen extends StatelessWidget {
   static const String routeName = '/verification';
@@ -8,13 +9,13 @@ class VerificationScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: AppColors.white,
       appBar: AppBar(
-        surfaceTintColor: Colors.white,
-        backgroundColor: Colors.white,
+        surfaceTintColor: AppColors.white,
+        backgroundColor: AppColors.white,
         elevation: 0,
         leading: IconButton(
-          icon: const Icon(Icons.arrow_back_ios, color: Colors.black),
+          icon: const Icon(Icons.arrow_back_ios, color: AppColors.black),
           onPressed: () => Navigator.pop(context),
         ),
       ),
@@ -28,7 +29,7 @@ class VerificationScreen extends StatelessWidget {
               style: TextStyle(
                 fontSize: 22,
                 fontWeight: FontWeight.bold,
-                color: Colors.black87,
+                color: AppColors.black,
               ),
             ),
             const SizedBox(height: 30),
@@ -36,7 +37,7 @@ class VerificationScreen extends StatelessWidget {
               'Code',
               style: TextStyle(
                 fontSize: 14,
-                color: Colors.grey,
+                color: AppColors.grey,
               ),
             ),
             const SizedBox(height: 8),
@@ -54,10 +55,10 @@ class VerificationScreen extends StatelessWidget {
                     decoration: InputDecoration(
                       counterText: '',
                       enabledBorder: UnderlineInputBorder(
-                        borderSide: BorderSide(color: Colors.grey.shade400, width: 1),
+                        borderSide: BorderSide(color: AppColors.grey, width: 1),
                       ),
                       focusedBorder: UnderlineInputBorder(
-                        borderSide: BorderSide(color: Colors.grey.shade600, width: 1.2),
+                        borderSide: BorderSide(color: AppColors.grey, width: 1.2),
                       ),
                     ),
                     onChanged: (value) {
@@ -76,7 +77,7 @@ class VerificationScreen extends StatelessWidget {
               },
               child: const Text(
                 'Resend Code',
-                style: TextStyle(color: Colors.green),
+                style: TextStyle(color: AppColors.primary),
               ),
             ),
             const Spacer(),
@@ -90,10 +91,10 @@ class VerificationScreen extends StatelessWidget {
                   },
                   style: ElevatedButton.styleFrom(
                     shape: const CircleBorder(),
-                    backgroundColor: Colors.green,
+                    backgroundColor: AppColors.primary,
                     padding: const EdgeInsets.all(18),
                   ),
-                  child: const Icon(Icons.arrow_forward_ios_rounded, color: Colors.white),
+                  child: const Icon(Icons.arrow_forward_ios_rounded, color: AppColors.white),
                 ),
               ),
             ),

@@ -8,13 +8,15 @@ class AppColors {
   static const Color textPrimary = Color(0xFF181725);
 
   /// Grey text (hint text, secondary)
-  static const Color textSecondary = Color(0xFF7C7C7C);
+  static const Color grey = Colors.grey;
 
   /// Light grey background or divider
   static const Color lightGrey = Color(0xFFF2F3F2);
 
   /// White background
   static const Color white = Colors.white;
+
+  static const Color black = Colors.black;
 
   /// Red for error or delete
   static const Color errorRed = Color(0xFFFF3E3E);

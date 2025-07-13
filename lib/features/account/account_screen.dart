@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:grocery_mart_app/core/utils/constants/app_colors.dart';
 
 class AccountScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: AppColors.white,
       appBar: AppBar(
-        surfaceTintColor: Colors.white,
-        backgroundColor: Colors.white,
+        surfaceTintColor: AppColors.white,
+        backgroundColor: AppColors.white,
         elevation: 0,
         automaticallyImplyLeading: false,
       ),
@@ -63,7 +64,7 @@ class AccountScreen extends StatelessWidget {
                       ),
                     ),
                     const SizedBox(width: 4),
-                    Icon(Icons.edit, size: 16, color: Colors.green),
+                    Icon(Icons.edit, size: 16, color: AppColors.primary),
                   ],
                 ),
                 const SizedBox(height: 4),
@@ -83,7 +84,7 @@ class AccountScreen extends StatelessWidget {
     return Column(
       children: [
         ListTile(
-          leading: Icon(icon, color: Colors.black),
+          leading: Icon(icon, color: AppColors.black),
           title: Text(
             title,
             style: TextStyle(fontSize: 16),
@@ -113,12 +114,12 @@ class AccountScreen extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Icon(Icons.logout, color: Colors.green),
+              Icon(Icons.logout, color: AppColors.primary),
               const SizedBox(width: 8),
               Text(
                 "Log Out",
                 style: TextStyle(
-                  color: Colors.green,
+                  color: AppColors.primary,
                   fontWeight: FontWeight.bold,
                 ),
               )

@@ -1,6 +1,7 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:grocery_mart_app/core/services/cart_service.dart';
+import 'package:grocery_mart_app/core/services/favourite_service.dart';
 import 'package:grocery_mart_app/core/utils/constants/app_colors.dart';
 import 'package:grocery_mart_app/features/cart/cart_screen.dart';
 import 'package:grocery_mart_app/features/home_screen/provider/product_detail_provider.dart';
@@ -60,11 +61,27 @@ class ProductDetailScreenContent extends StatefulWidget {
 
 class _ProductDetailScreenContentState extends State<ProductDetailScreenContent> {
   int _currentIndex = 0;
+  bool _isFavorite = false;
+
+  @override
+  void initState() {
+    super.initState();
+    _checkFavoriteStatus();
+  }
+
+  Future<void> _checkFavoriteStatus() async {
+    final favoriteService = Provider.of<FavoriteService>(context, listen: false);
+    _isFavorite = await favoriteService.isFavorite(widget.id);
+    if (mounted) {
+      setState(() {});
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
     final provider = Provider.of<ProductProvider>(context);
     final cartService = Provider.of<CartService>(context);
+    final favoriteService = Provider.of<FavoriteService>(context);
 
     return Scaffold(
       appBar: AppBar(
@@ -209,8 +226,23 @@ class _ProductDetailScreenContentState extends State<ProductDetailScreenContent>
                         ),
                       ),
                       IconButton(
-                        icon: const Icon(Icons.favorite_border),
-                        onPressed: () {},
+                        icon: Icon(
+                          _isFavorite ? Icons.favorite : Icons.favorite_border,
+                          color: _isFavorite ? Colors.green : null,
+                        ),
+                        onPressed: () async {
+                          final item = FavoriteItem(
+                            id: widget.id,
+                            name: widget.name,
+                            image: widget.imageName,
+                            price: widget.price,
+                            description: widget.description,
+                          );
+                          await favoriteService.toggleFavorite(item);
+                          setState(() {
+                            _isFavorite = !_isFavorite;
+                          });
+                        },
                       ),
                     ],
                   ),

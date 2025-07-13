@@ -1,12 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:grocery_mart_app/core/services/cart_service.dart';
+import 'package:grocery_mart_app/core/utils/constants/app_colors.dart';
 import 'package:grocery_mart_app/features/account/account_screen.dart';
 import 'package:grocery_mart_app/features/cart/cart_screen.dart';
+import 'package:grocery_mart_app/features/favourite/favourite_screen.dart';
 import 'package:grocery_mart_app/features/find_products/find_products_screen.dart';
 import 'package:grocery_mart_app/features/home_screen/home_screen.dart';
 
 class BottomNavBar extends StatefulWidget {
   static const String routeName = '/bottam_navbar';
+
+  const BottomNavBar({super.key});
 
   @override
   _BottomNavBarState createState() => _BottomNavBarState();
@@ -15,11 +18,11 @@ class BottomNavBar extends StatefulWidget {
 class _BottomNavBarState extends State<BottomNavBar> {
   int _selectedIndex = 0;
 
-  static List<Widget> _widgetOptions = <Widget>[
+  static final List<Widget> _widgetOptions = <Widget>[
     HomeScreen(),
     FindProductsScreen(),
     CartScreen(),
-    const Text('Favourite Screen', style: TextStyle(fontSize: 35, fontWeight: FontWeight.bold)),
+    FavoriteScreen(),
     AccountScreen(),
   ];
 
@@ -36,7 +39,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
         child: _widgetOptions.elementAt(_selectedIndex),
       ),
       bottomNavigationBar: BottomNavigationBar(
-        items: const <BottomNavigationBarItem>[
+        items:  <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(Icons.store),
             label: 'Shop',
@@ -60,7 +63,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
         ],
         currentIndex: _selectedIndex,
         selectedItemColor: Color(0xFF4CAF50),
-        unselectedItemColor: Colors.grey,
+        unselectedItemColor: AppColors.grey,
         onTap: _onItemTapped,
         type: BottomNavigationBarType.fixed,
       ),

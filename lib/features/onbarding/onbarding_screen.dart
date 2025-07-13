@@ -19,7 +19,7 @@ class OnboardingScreen extends StatelessWidget {
             fit: BoxFit.cover,
           ),
           Container(
-            color: Colors.black.withOpacity(0.3), // optional overlay
+            color: AppColors.black, // optional overlay
           ),
           Padding(
             padding: const EdgeInsets.all(20.0),
@@ -38,7 +38,7 @@ class OnboardingScreen extends StatelessWidget {
                   style: TextStyle(
                     fontSize: 32,
                     fontWeight: FontWeight.bold,
-                    color: Colors.white,
+                    color: AppColors.white,
                   ),
                 ),
                 const SizedBox(height: 10),
@@ -47,7 +47,7 @@ class OnboardingScreen extends StatelessWidget {
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     fontSize: 16,
-                    color: Colors.white70,
+                    color: AppColors.white,
                   ),
                 ),
                 const SizedBox(height: 30),

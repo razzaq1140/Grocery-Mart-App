@@ -18,10 +18,10 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: AppColors.white,
       appBar: AppBar(
-        backgroundColor: Colors.white,
-        surfaceTintColor: Colors.white,
+        backgroundColor: AppColors.white,
+        surfaceTintColor: AppColors.white,
         elevation: 0,
        automaticallyImplyLeading: false,
       ),
@@ -34,7 +34,7 @@ class _LoginScreenState extends State<LoginScreen> {
               Center(
                 child: Image.asset(
                   AppImages.carrotImages,
-                  color: Colors.red,
+                  color: AppColors.errorRed,
                   height: 60,
                 ),
               ),
@@ -46,7 +46,7 @@ class _LoginScreenState extends State<LoginScreen> {
               const SizedBox(height: 10),
               const Text(
                 'Enter your email and password',
-                style: TextStyle(fontSize: 16, color: Colors.grey),
+                style: TextStyle(fontSize: 16, color: AppColors.grey),
               ),
               const SizedBox(height: 20),
 
@@ -55,12 +55,12 @@ class _LoginScreenState extends State<LoginScreen> {
                 controller: _emailController,
                 decoration: InputDecoration(
                   labelText: 'Email',
-                  labelStyle: const TextStyle(color: Colors.grey),
+                  labelStyle: const TextStyle(color: AppColors.grey),
                   enabledBorder: const UnderlineInputBorder(
-                    borderSide: BorderSide(color: Colors.grey),
+                    borderSide: BorderSide(color: AppColors.grey),
                   ),
                   focusedBorder: const UnderlineInputBorder(
-                    borderSide: BorderSide(color: Colors.grey),
+                    borderSide: BorderSide(color: AppColors.grey),
                   ),
                   border: const UnderlineInputBorder(),
                 ),
@@ -73,18 +73,18 @@ class _LoginScreenState extends State<LoginScreen> {
                 obscureText: _obscurePassword,
                 decoration: InputDecoration(
                   labelText: 'Password',
-                  labelStyle: const TextStyle(color: Colors.grey),
+                  labelStyle: const TextStyle(color: AppColors.grey),
                   enabledBorder: const UnderlineInputBorder(
-                    borderSide: BorderSide(color: Colors.grey),
+                    borderSide: BorderSide(color: AppColors.grey),
                   ),
                   focusedBorder: const UnderlineInputBorder(
-                    borderSide: BorderSide(color: Colors.grey),
+                    borderSide: BorderSide(color: AppColors.grey),
                   ),
                   border: const UnderlineInputBorder(),
                   suffixIcon: IconButton(
                     icon: Icon(
                       _obscurePassword ? Icons.visibility_off : Icons.visibility,
-                      color: Colors.grey,
+                      color: AppColors.grey,
                     ),
                     onPressed: () {
                       setState(() {
@@ -104,7 +104,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   },
                   child: const Text(
                     'Forgot Password?',
-                    style: TextStyle(color: Colors.grey),
+                    style: TextStyle(color: AppColors.grey),
                   ),
                 ),
               ),
@@ -123,7 +123,7 @@ class _LoginScreenState extends State<LoginScreen> {
               Center(
                 child: RichText(
                   text: TextSpan(
-                    style: const TextStyle(color: Colors.black),
+                    style: TextStyle(color: AppColors.grey),
                     children: [
                       const TextSpan(text: "Don't have an account? "),
                       WidgetSpan(

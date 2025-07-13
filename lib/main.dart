@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:grocery_mart_app/core/services/cart_service.dart';
+import 'package:grocery_mart_app/core/services/favourite_service.dart';
 import 'package:grocery_mart_app/features/auth/login_screen.dart';
 import 'package:grocery_mart_app/features/auth/mobile_number_screen.dart';
 import 'package:grocery_mart_app/features/auth/selected_location_screen.dart';
@@ -7,8 +8,6 @@ import 'package:grocery_mart_app/features/auth/sign_in_screen.dart';
 import 'package:grocery_mart_app/features/auth/signup_screen.dart';
 import 'package:grocery_mart_app/features/auth/verification_screen.dart';
 import 'package:grocery_mart_app/features/bottam_navbar/bottam_navbar.dart';
-import 'package:grocery_mart_app/features/home_screen/home_screen.dart';
-import 'package:grocery_mart_app/features/home_screen/product_detail_screen.dart';
 import 'package:grocery_mart_app/features/home_screen/provider/home_screen_provider.dart';
 import 'package:grocery_mart_app/features/onbarding/onbarding_screen.dart';
 import 'package:grocery_mart_app/features/splash/splash_screen.dart';
@@ -25,6 +24,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiProvider(providers: [
       ChangeNotifierProvider(create: (context) => HomeProvider(),),
+      ChangeNotifierProvider(create: (context) => FavoriteService(),),
       ChangeNotifierProvider(
         create: (_) => CartService(),
       ),
